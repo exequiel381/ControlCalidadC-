@@ -1,0 +1,9 @@
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.csprojAssemblyReference.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.Autenticacion.resources
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.Properties.Resources.resources
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.csproj.GenerateResource.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.csproj.CoreCompileInputs.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\bin\Debug\ControlCalidad.Cliente.Vistas.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\bin\Debug\ControlCalidad.Cliente.Vistas.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Vistas\obj\Debug\ControlCalidad.Cliente.Vistas.pdb

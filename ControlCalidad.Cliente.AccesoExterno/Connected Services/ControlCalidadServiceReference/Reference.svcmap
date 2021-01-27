@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f658a95-2f14-40ef-8514-a2b5dd69c25d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="77bf6f68-4f33-4f94-b4dd-5c34c46b339a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd4" />
+    <MetadataFile FileName="item31.xsd" MetadataType="Schema" ID="188541f1-c5cb-4f39-b5de-16d6f3c5c2f2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="c25eb446-f930-4da3-b60d-14e24d72fed9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="7b38732a-4ace-463f-8112-3696b06a599d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd1" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="d2b8668b-9778-4205-875e-b023cd47fadb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd0" />
+    <MetadataFile FileName="ControlCalidadServicio.wsdl" MetadataType="Wsdl" ID="d6841b05-1700-4e1a-8386-42e472f57739" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="053ff217-ff7d-4b8d-871a-b633c320bc5b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

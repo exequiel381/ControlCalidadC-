@@ -1,0 +1,6 @@
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csprojAssemblyReference.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb

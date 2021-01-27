@@ -1,0 +1,15 @@
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe.config
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csprojAssemblyReference.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CoreCompileInputs.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.pdb

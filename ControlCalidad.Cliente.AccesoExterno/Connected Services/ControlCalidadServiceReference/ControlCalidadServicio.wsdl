@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ControlCalidadServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio.Entidades" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IControlCalidadServicio_GetLineas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineas" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetLineas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_Autenticar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autenticar" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_Autenticar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_UsuariosDisponibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsuariosDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_UsuariosDisponibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsuariosDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetLineasDisponibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineasDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetLineasDisponibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineasDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetModelos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelos" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetModelos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetColores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColores" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetColores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_CrearNuevaOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearNuevaOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_CrearNuevaOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearNuevaOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTurno" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_CambiarEstadoOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_CambiarEstadoOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetDefectos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefectos" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetDefectos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefectosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IControlCalidadServicio">
+    <wsdl:operation name="GetLineas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineas" message="tns:IControlCalidadServicio_GetLineas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineasResponse" message="tns:IControlCalidadServicio_GetLineas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Autenticar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/Autenticar" message="tns:IControlCalidadServicio_Autenticar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/AutenticarResponse" message="tns:IControlCalidadServicio_Autenticar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosDisponibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/UsuariosDisponibles" message="tns:IControlCalidadServicio_UsuariosDisponibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/UsuariosDisponiblesResponse" message="tns:IControlCalidadServicio_UsuariosDisponibles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineasDisponibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineasDisponibles" message="tns:IControlCalidadServicio_GetLineasDisponibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineasDisponiblesResponse" message="tns:IControlCalidadServicio_GetLineasDisponibles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetModelos" message="tns:IControlCalidadServicio_GetModelos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetModelosResponse" message="tns:IControlCalidadServicio_GetModelos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetColores" message="tns:IControlCalidadServicio_GetColores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetColoresResponse" message="tns:IControlCalidadServicio_GetColores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearNuevaOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/CrearNuevaOP" message="tns:IControlCalidadServicio_CrearNuevaOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/CrearNuevaOPResponse" message="tns:IControlCalidadServicio_CrearNuevaOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerTurno" message="tns:IControlCalidadServicio_ObtenerTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerTurnoResponse" message="tns:IControlCalidadServicio_ObtenerTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/CambiarEstadoOP" message="tns:IControlCalidadServicio_CambiarEstadoOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/CambiarEstadoOPResponse" message="tns:IControlCalidadServicio_CambiarEstadoOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetDefectos" message="tns:IControlCalidadServicio_GetDefectos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetDefectosResponse" message="tns:IControlCalidadServicio_GetDefectos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLineas">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetLineas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autenticar">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/Autenticar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosDisponibles">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/UsuariosDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineasDisponibles">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetLineasDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelos">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetModelos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColores">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetColores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearNuevaOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/CrearNuevaOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTurno">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/CambiarEstadoOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectos">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetDefectos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ControlCalidadServicio">
+    <wsdl:port name="BasicHttpBinding_IControlCalidadServicio" binding="tns:BasicHttpBinding_IControlCalidadServicio">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ControlCalidad.Servidor.Servicio/ControlCalidadServicio/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

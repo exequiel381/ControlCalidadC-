@@ -1,0 +1,9 @@
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\bin\Debug\ControlCalidad.Cliente.Presentador.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\bin\Debug\ControlCalidad.Cliente.Presentador.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\obj\Debug\ControlCalidad.Cliente.Presentador.csprojAssemblyReference.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\obj\Debug\ControlCalidad.Cliente.Presentador.csproj.CoreCompileInputs.cache
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\obj\Debug\ControlCalidad.Cliente.Presentador.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\obj\Debug\ControlCalidad.Cliente.Presentador.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\bin\Debug\ControlCalidad.Cliente.Vistas.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\bin\Debug\ControlCalidad.Cliente.Vistas.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentador\obj\Debug\ControlCalidad.Cliente.Presentador.csproj.CopyComplete
