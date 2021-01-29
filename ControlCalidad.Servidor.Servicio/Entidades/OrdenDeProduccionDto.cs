@@ -27,7 +27,10 @@ namespace ControlCalidad.Servidor.Servicio.Entidades
         public ModeloDto Modelo { get; set; }
         [DataMember]
         public ColorDto Color { get; set; }
-      
+
+        [DataMember]
+        public List<HallazgoDto> hallazgos = new List<HallazgoDto>();
+
 
 
     }

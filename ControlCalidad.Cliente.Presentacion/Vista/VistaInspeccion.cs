@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Servidor.Servicio.Entidades;
+﻿using ControlCalidad.Cliente.Presentacion.Presentador;
+using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         List<DefectoDto> observados; 
         List<DefectoDto> Reproceso;
         TurnoDto t;
+        InspeccionPresentador inspeccionPresentador;
+        
 
         public VistaInspeccion(OrdenDeProduccionDto op, UsuarioDto supervisorCalidad, List<DefectoDto> observados, List<DefectoDto> Reproceso, TurnoDto t)//List<int> horasTurno)
         {
@@ -27,6 +30,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             this.observados = observados;
             this.Reproceso = Reproceso;
             this.t = t;
+            inspeccionPresentador = new InspeccionPresentador(op);
             InitializeComponent();
         }
 
@@ -58,7 +62,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             
             foreach(DefectoDto d in observados)
             {
-                IzqObservado.Rows.Add(d.IdDefecto,d.Detalle);//El tercer parametro sera la cantidad contada desde un metodo 
+                IzqObservado.Rows.Add(d.IdDefecto,d.Detalle, inspeccionPresentador.ContabilizarDefecto("Izquierdo", d.IdDefecto, op.Numero));//El tercer parametro sera la cantidad contada desde un metodo 
+
             }
 
             IzqObservado.Columns[0].Width = 40;
@@ -67,7 +72,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
             foreach (DefectoDto d in Reproceso)
             {
-                IzqReproceso.Rows.Add(d.IdDefecto, d.Detalle);//El tercer parametro sera la cantidad contada desde un metodo 
+                IzqReproceso.Rows.Add(d.IdDefecto, d.Detalle, inspeccionPresentador.ContabilizarDefecto("Izquierdo", d.IdDefecto, op.Numero));//El tercer parametro sera la cantidad contada desde un metodo 
             }
             IzqReproceso.Columns[0].Width = 40;
             IzqReproceso.Columns[1].Width = 100;
@@ -75,7 +80,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
             foreach (DefectoDto d in observados)
             {
-                DerObservado.Rows.Add(d.IdDefecto, d.Detalle);//El tercer parametro sera la cantidad contada desde un metodo 
+                DerObservado.Rows.Add(d.IdDefecto, d.Detalle, inspeccionPresentador.ContabilizarDefecto("Derecho", d.IdDefecto, op.Numero));//El tercer parametro sera la cantidad contada desde un metodo 
             }
             DerObservado.Columns[0].Width = 40;
             DerObservado.Columns[1].Width = 100;
@@ -83,7 +88,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
             foreach (DefectoDto d in Reproceso)
             {
-                DerReproceso.Rows.Add(d.IdDefecto, d.Detalle);//El tercer parametro sera la cantidad contada desde un metodo 
+                DerReproceso.Rows.Add(d.IdDefecto, d.Detalle, inspeccionPresentador.ContabilizarDefecto("Derecho", d.IdDefecto, op.Numero));//El tercer parametro sera la cantidad contada desde un metodo 
             }
             DerReproceso.Columns[0].Width = 40;
             DerReproceso.Columns[1].Width = 100;
@@ -91,7 +96,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         }
 
        
-
         private void button1_Click(object sender, EventArgs e)
         {
             btnSumar.BackColor = Color.Green;
@@ -110,25 +114,60 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             this.Valor = -1;
         }
 
-        
+
+        private void ActualizarContador(DataGridView tabla,string pie)
+        {
+            int cantidadActual = int.Parse(tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value.ToString());
+            if(cantidadActual == 0 && Valor < 0)
+            {
+                //mostraremos un mensaje en un label para no entorpecer
+            }
+            else
+            {
+                //podemos actualizarlo en la vista asi
+                int idDefecto = int.Parse(tabla.Rows[tabla.CurrentRow.Index].Cells[0].Value.ToString());
+                inspeccionPresentador.RegistrarHallazgo(pie, int.Parse(cbxHoras.SelectedItem.ToString()), idDefecto, Valor);
+
+                //tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = cantidadActual + Valor;
+                tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = inspeccionPresentador.ContabilizarDefecto(pie, idDefecto, op.Numero);
+            }
+
+        }
+        private void IzqObservado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.ActualizarContador(IzqObservado, "Izquierdo");
+
+        }
 
         private void IzqReproceso_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            string a = IzqReproceso.Rows[IzqReproceso.CurrentRow.Index].Cells[1].Value.ToString();
-            MessageBox.Show("Soy la tabla IzqReproceso y mi valor en la celda es: " + a);
+            this.ActualizarContador(IzqReproceso, "Izquierdo");
+           
         }
 
         private void DerObservado_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            string a = DerObservado.Rows[DerObservado.CurrentRow.Index].Cells[1].Value.ToString();
-            MessageBox.Show("Soy la tabla DerObser y mi valor en la celda es: " + a);
+            this.ActualizarContador(DerObservado, "Derecho");
+            
         }
 
         private void DerReproceso_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            string a = DerReproceso.Rows[DerReproceso.CurrentRow.Index].Cells[1].Value.ToString();
-            MessageBox.Show("Soy la tabla DerReproceso y mi valor en la celda es: " + a);
+            this.ActualizarContador(DerReproceso, "Derecho");
+            
         }
+
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+
+
+
 
 
 
@@ -159,22 +198,13 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             MessageBox.Show("Soy la tabla DerReproceso y mi valor en la celda es: " + a);
         }
 
-        private void IzqObservado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string a = IzqObservado.Rows[IzqObservado.CurrentRow.Index].Cells[1].Value.ToString();
-            MessageBox.Show("Soy la tabla IzqObser y mi valor en la celda es: " + a);
-        }
+        
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void TColores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //CON ESTO TOMAMOS EL ID DE LA LINEA DEL DATAGRIDVIEW 
-            //string a = TColores.Rows[TColores.CurrentRow.Index].Cells[1].Value.ToString();
-            //MessageBox.Show(a);
-        }
+        
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -184,6 +214,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         {
 
         }
+
+
         //*
+
+       
     }
 }

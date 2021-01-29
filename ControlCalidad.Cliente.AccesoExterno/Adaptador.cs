@@ -93,6 +93,22 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.CambiarEstadoOP(NumeroOP,Estado);
             }
         }
+
+        public static void RegistrarHallazgo(int NumeroOP,HallazgoDto hallazgo)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                servicio.RegistrarHallazgo(NumeroOP, hallazgo);
+            }
+        }
+
+        public static int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ContabilizarDefecto(pie, idDefecto, NumeroOP);
+            }
+        }
         
     }
 }

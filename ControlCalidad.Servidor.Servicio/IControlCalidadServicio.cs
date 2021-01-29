@@ -37,5 +37,12 @@ namespace ControlCalidad.Servidor.Servicio
         
         [OperationContract]
         DefectoDto[] GetDefectos();
+
+        [OperationContract]
+        void RegistrarHallazgo(int NumeroOP, HallazgoDto hallazgo);
+
+        [OperationContract]
+
+        int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP);
     }
 }

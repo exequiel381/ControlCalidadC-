@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Interfaces\IOrdenDeProduccion.cs" />
     <Compile Include="Presentador\AutenticacionPresentador.cs" />
+    <Compile Include="Presentador\InspeccionPresentador.cs" />
     <Compile Include="Presentador\OrdenDeProduccionPresentador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

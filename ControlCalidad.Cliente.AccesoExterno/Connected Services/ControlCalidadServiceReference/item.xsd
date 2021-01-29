@@ -128,4 +128,33 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="RegistrarHallazgo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumeroOP" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio.Entidades" minOccurs="0" name="hallazgo" nillable="true" type="q10:HallazgoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarHallazgoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContabilizarDefecto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idDefecto" type="xs:int" />
+        <xs:element minOccurs="0" name="NumeroOP" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContabilizarDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContabilizarDefectoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

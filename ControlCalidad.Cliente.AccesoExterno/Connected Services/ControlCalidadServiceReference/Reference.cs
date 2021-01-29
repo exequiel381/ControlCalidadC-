@@ -74,6 +74,18 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/GetDefectos", ReplyAction="http://tempuri.org/IControlCalidadServicio/GetDefectosResponse")]
         System.Threading.Tasks.Task<ControlCalidad.Servidor.Servicio.Entidades.DefectoDto[]> GetDefectosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarHallazgo", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarHallazgoResponse")]
+        void RegistrarHallazgo(int NumeroOP, ControlCalidad.Servidor.Servicio.Entidades.HallazgoDto hallazgo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarHallazgo", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarHallazgoResponse")]
+        System.Threading.Tasks.Task RegistrarHallazgoAsync(int NumeroOP, ControlCalidad.Servidor.Servicio.Entidades.HallazgoDto hallazgo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ContabilizarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/ContabilizarDefectoResponse")]
+        int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ContabilizarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/ContabilizarDefectoResponse")]
+        System.Threading.Tasks.Task<int> ContabilizarDefectoAsync(string pie, int idDefecto, int NumeroOP);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -181,6 +193,22 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<ControlCalidad.Servidor.Servicio.Entidades.DefectoDto[]> GetDefectosAsync() {
             return base.Channel.GetDefectosAsync();
+        }
+        
+        public void RegistrarHallazgo(int NumeroOP, ControlCalidad.Servidor.Servicio.Entidades.HallazgoDto hallazgo) {
+            base.Channel.RegistrarHallazgo(NumeroOP, hallazgo);
+        }
+        
+        public System.Threading.Tasks.Task RegistrarHallazgoAsync(int NumeroOP, ControlCalidad.Servidor.Servicio.Entidades.HallazgoDto hallazgo) {
+            return base.Channel.RegistrarHallazgoAsync(NumeroOP, hallazgo);
+        }
+        
+        public int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP) {
+            return base.Channel.ContabilizarDefecto(pie, idDefecto, NumeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<int> ContabilizarDefectoAsync(string pie, int idDefecto, int NumeroOP) {
+            return base.Channel.ContabilizarDefectoAsync(pie, idDefecto, NumeroOP);
         }
     }
 }

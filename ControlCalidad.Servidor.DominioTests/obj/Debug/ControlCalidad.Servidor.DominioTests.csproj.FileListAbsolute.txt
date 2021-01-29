@@ -17,3 +17,5 @@ D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\Contr
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.DominioTests\obj\Debug\ControlCalidad.Servidor.DominioTests.csproj.CopyComplete
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.DominioTests\obj\Debug\ControlCalidad.Servidor.DominioTests.dll
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.DominioTests\obj\Debug\ControlCalidad.Servidor.DominioTests.pdb
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.DominioTests\bin\Debug\ControlCalidad.Servidor.Datos.dll
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Servidor.DominioTests\bin\Debug\ControlCalidad.Servidor.Datos.pdb

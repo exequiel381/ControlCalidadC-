@@ -45,6 +45,7 @@
     <Compile Include="Color.cs" />
     <Compile Include="Defecto.cs" />
     <Compile Include="EstadoOP.cs" />
+    <Compile Include="Hallazgo.cs" />
     <Compile Include="Linea.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="OrdenDeProduccion.cs" />

@@ -57,6 +57,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="OrdenDeProduccionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurnoTests.cs" />
   </ItemGroup>
@@ -64,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlCalidad.Servidor.Datos\ControlCalidad.Servidor.Datos.csproj">
+      <Project>{C0D9F3BF-33F8-49D8-AC2E-054A1E2B42E0}</Project>
+      <Name>ControlCalidad.Servidor.Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ControlCalidad.Servidor.Dominio\ControlCalidad.Servidor.Dominio.csproj">
       <Project>{0A9CA5D0-3946-42F9-90AE-FD35955945B6}</Project>
       <Name>ControlCalidad.Servidor.Dominio</Name>

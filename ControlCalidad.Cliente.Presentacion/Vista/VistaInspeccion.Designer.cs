@@ -41,11 +41,26 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbxHoras = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.IzqReproceso = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IzqObservado = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.DerReproceso = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DerObservado = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,27 +69,12 @@
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IzqReproceso = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DerObservado = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DerReproceso = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IzqObservado)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DerObservado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DerReproceso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DerObservado)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -223,6 +223,39 @@
             this.panel1.Size = new System.Drawing.Size(599, 476);
             this.panel1.TabIndex = 13;
             // 
+            // IzqReproceso
+            // 
+            this.IzqReproceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IzqReproceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.IzqReproceso.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.IzqReproceso.Location = new System.Drawing.Point(311, 61);
+            this.IzqReproceso.MultiSelect = false;
+            this.IzqReproceso.Name = "IzqReproceso";
+            this.IzqReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.IzqReproceso.RowTemplate.Height = 40;
+            this.IzqReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.IzqReproceso.Size = new System.Drawing.Size(240, 412);
+            this.IzqReproceso.TabIndex = 4;
+            this.IzqReproceso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IzqReproceso_CellContentClick_1);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Detalle";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // IzqObservado
             // 
             this.IzqObservado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -240,6 +273,21 @@
             this.IzqObservado.Size = new System.Drawing.Size(240, 412);
             this.IzqObservado.TabIndex = 3;
             this.IzqObservado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IzqObservado_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.Name = "Detalle";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
             // 
             // label10
             // 
@@ -288,12 +336,78 @@
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // DerReproceso
+            // 
+            this.DerReproceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DerReproceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.DerReproceso.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DerReproceso.Location = new System.Drawing.Point(345, 61);
+            this.DerReproceso.MultiSelect = false;
+            this.DerReproceso.Name = "DerReproceso";
+            this.DerReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DerReproceso.RowTemplate.Height = 40;
+            this.DerReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DerReproceso.Size = new System.Drawing.Size(240, 412);
+            this.DerReproceso.TabIndex = 5;
+            this.DerReproceso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DerReproceso_CellContentClick_1);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Detalle";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // DerObservado
+            // 
+            this.DerObservado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DerObservado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.DerObservado.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DerObservado.Location = new System.Drawing.Point(16, 61);
+            this.DerObservado.MultiSelect = false;
+            this.DerObservado.Name = "DerObservado";
+            this.DerObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DerObservado.RowTemplate.Height = 40;
+            this.DerObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DerObservado.Size = new System.Drawing.Size(240, 412);
+            this.DerObservado.TabIndex = 4;
+            this.DerObservado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DerObservado_CellContentClick_1);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Detalle";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Orange;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(372, 29);
+            this.label13.Location = new System.Drawing.Point(412, 29);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(120, 20);
             this.label13.TabIndex = 2;
@@ -358,6 +472,7 @@
             this.btnFinalizar.TabIndex = 17;
             this.btnFinalizar.Text = "Finalizar Inspeccion";
             this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // button1
             // 
@@ -376,120 +491,6 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Hermanado";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle";
-            this.Detalle.Name = "Detalle";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // IzqReproceso
-            // 
-            this.IzqReproceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IzqReproceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.IzqReproceso.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.IzqReproceso.Location = new System.Drawing.Point(311, 61);
-            this.IzqReproceso.MultiSelect = false;
-            this.IzqReproceso.Name = "IzqReproceso";
-            this.IzqReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.IzqReproceso.RowTemplate.Height = 40;
-            this.IzqReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.IzqReproceso.Size = new System.Drawing.Size(240, 412);
-            this.IzqReproceso.TabIndex = 4;
-            this.IzqReproceso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IzqReproceso_CellContentClick_1);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Detalle";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // DerObservado
-            // 
-            this.DerObservado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DerObservado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.DerObservado.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DerObservado.Location = new System.Drawing.Point(16, 61);
-            this.DerObservado.MultiSelect = false;
-            this.DerObservado.Name = "DerObservado";
-            this.DerObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DerObservado.RowTemplate.Height = 40;
-            this.DerObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DerObservado.Size = new System.Drawing.Size(240, 412);
-            this.DerObservado.TabIndex = 4;
-            this.DerObservado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DerObservado_CellContentClick_1);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Detalle";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // DerReproceso
-            // 
-            this.DerReproceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DerReproceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.DerReproceso.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DerReproceso.Location = new System.Drawing.Point(345, 61);
-            this.DerReproceso.MultiSelect = false;
-            this.DerReproceso.Name = "DerReproceso";
-            this.DerReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DerReproceso.RowTemplate.Height = 40;
-            this.DerReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DerReproceso.Size = new System.Drawing.Size(240, 412);
-            this.DerReproceso.TabIndex = 5;
-            this.DerReproceso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DerReproceso_CellContentClick_1);
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Detalle";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // VistaInspeccion
             // 
@@ -522,12 +523,12 @@
             this.Load += new System.EventHandler(this.VistaInspeccion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IzqObservado)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DerObservado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DerReproceso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DerObservado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

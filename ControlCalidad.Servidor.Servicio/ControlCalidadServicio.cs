@@ -16,6 +16,7 @@ namespace ControlCalidad.Servidor.Servicio
     public class ControlCalidadServicio : IControlCalidadServicio
     {
         private OrdenDeProduccionControlador _controladorOP = new OrdenDeProduccionControlador(); 
+        private InspeccionControlador _controladorInspeccion = new InspeccionControlador(); 
         public LineaDto[] GetLineas()
         {
             return Repositorio.GetLineas()
@@ -208,6 +209,33 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorOP.CambiarEstadoOP(NumeroOP, Estado);
 
+        }
+
+        public void RegistrarHallazgo(int NumeroOP, HallazgoDto hallazgo)
+        {
+
+            Hallazgo h = new Hallazgo
+            {
+                defecto = new Defecto
+                {
+                    idDefecto = hallazgo.defecto.IdDefecto,
+                    Detalle = hallazgo.defecto.Detalle,
+                    tipoDefecto = hallazgo.defecto.TipoDefecto
+
+
+                },
+
+                hora = hallazgo.hora,
+                pie = hallazgo.pie,
+                Valor = hallazgo.Valor,
+            };
+
+            _controladorInspeccion.RegistrarHallazgo(NumeroOP,h);
+        }
+
+        public int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP)
+        {
+            return _controladorInspeccion.ContabilizarDefecto(pie, idDefecto, NumeroOP);
         }
     }
  }

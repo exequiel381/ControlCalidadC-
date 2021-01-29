@@ -25,6 +25,26 @@ namespace ControlCalidad.Servidor.Datos
         public List<Linea> lineas = new List<Linea>();
         public List<OrdenDeProduccion> ordenes = new List<OrdenDeProduccion>();
         public List<Modelo> modelos = new List<Modelo>();
+
+        public void ActualizarOP(OrdenDeProduccion op)
+        {
+            int aux = -1;
+            
+                for(int i=0; i<ordenes.Count; i++)
+                {
+
+                    if (ordenes[i].Numero == op.Numero)
+                    {
+                        aux = i;
+
+                    }
+                }
+
+            ordenes[aux] = op;
+            
+
+        }
+
         public List<Color> colores = new List<Color>();
         public List<Usuario> usuarios = new List<Usuario>();
         public List<Turno> turnos = new List<Turno>();
@@ -174,5 +194,12 @@ namespace ControlCalidad.Servidor.Datos
         {
             return getRepositorio().defectos;
         }
+
+        public OrdenDeProduccion ObtenerOrden(int Numero)
+        {
+            return ordenes.Find(op => op.Numero == Numero);
+        }
+
+
     }
 }

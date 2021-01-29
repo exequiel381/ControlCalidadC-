@@ -19,6 +19,28 @@ namespace ControlCalidad.Servidor.Dominio
 
         public Color Color { get; set; }
         public Modelo modelo { get; set; }
-       
+
+        public List<Hallazgo> hallazgos = new List<Hallazgo>();
+
+       public void RegistrarHallazgo(Hallazgo h)
+        {
+            this.hallazgos.Add(h);
+        }
+
+       public int ContabilizarDefecto(string pie, int idDefecto)
+        {
+            int cantidad=0;
+
+            //cantidad = hallazgos.FindAll(h => h.pie==pie && h.defecto.idDefecto==idDefecto).Count;
+
+            foreach(Hallazgo h in hallazgos.FindAll(h => h.pie == pie && h.defecto.idDefecto == idDefecto))
+            {
+                cantidad = cantidad+h.Valor;
+            }
+
+            return cantidad;
+        }
+
+
     }
 }

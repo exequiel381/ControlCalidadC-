@@ -18,7 +18,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             turnoActual = this.ObtenerTurnoActual();
         }
 
-        public void CrearNuevaOP(OrdenDeProduccionDto nuevaOP)//LA DEBE CREAR EL USUARIO NO AQUI
+        public void CrearNuevaOP(OrdenDeProduccionDto nuevaOP)
         {
 
            

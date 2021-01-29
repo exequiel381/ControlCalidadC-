@@ -44,7 +44,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(211, 71);
+            this.label1.Location = new System.Drawing.Point(464, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(388, 20);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(197, 145);
+            this.label2.Location = new System.Drawing.Point(450, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(200, 213);
+            this.label3.Location = new System.Drawing.Point(453, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.lbNOP.AutoSize = true;
             this.lbNOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNOP.Location = new System.Drawing.Point(272, 145);
+            this.lbNOP.Location = new System.Drawing.Point(525, 260);
             this.lbNOP.Name = "lbNOP";
             this.lbNOP.Size = new System.Drawing.Size(51, 16);
             this.lbNOP.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.lbLineaOP.AutoSize = true;
             this.lbLineaOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLineaOP.Location = new System.Drawing.Point(272, 213);
+            this.lbLineaOP.Location = new System.Drawing.Point(525, 328);
             this.lbLineaOP.Name = "lbLineaOP";
             this.lbLineaOP.Size = new System.Drawing.Size(51, 16);
             this.lbLineaOP.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(465, 145);
+            this.label6.Location = new System.Drawing.Point(718, 260);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 16);
             this.label6.TabIndex = 5;
@@ -110,7 +110,7 @@
             // 
             this.lbEstado.AutoSize = true;
             this.lbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(534, 145);
+            this.lbEstado.Location = new System.Drawing.Point(787, 260);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(51, 16);
             this.lbEstado.TabIndex = 6;
@@ -118,7 +118,7 @@
             // 
             // btnInspeccionar
             // 
-            this.btnInspeccionar.Location = new System.Drawing.Point(349, 281);
+            this.btnInspeccionar.Location = new System.Drawing.Point(602, 396);
             this.btnInspeccionar.Name = "btnInspeccionar";
             this.btnInspeccionar.Size = new System.Drawing.Size(134, 37);
             this.btnInspeccionar.TabIndex = 7;
@@ -132,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = global::ControlCalidad.Cliente.Presentacion.Properties.Resources.Freewallpaper99_com;
-            this.ClientSize = new System.Drawing.Size(822, 459);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.btnInspeccionar);
             this.Controls.Add(this.lbEstado);
             this.Controls.Add(this.label6);
@@ -142,7 +142,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "VistaSupCalidad";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lineas";
             this.Load += new System.EventHandler(this.VistaSupCalidad_Load);
             this.ResumeLayout(false);

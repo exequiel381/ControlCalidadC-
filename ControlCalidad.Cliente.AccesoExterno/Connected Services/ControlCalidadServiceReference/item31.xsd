@@ -30,6 +30,7 @@
       <xs:element minOccurs="0" name="Numero" type="xs:int" />
       <xs:element minOccurs="0" name="SupCalidadAsignado" nillable="true" type="tns:UsuarioDto" />
       <xs:element minOccurs="0" name="SupLineaAsignado" nillable="true" type="tns:UsuarioDto" />
+      <xs:element minOccurs="0" name="hallazgos" nillable="true" type="tns:ArrayOfHallazgoDto" />
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="lineaAsignada" nillable="true" type="q1:LineaDto" />
     </xs:sequence>
   </xs:complexType>
@@ -51,6 +52,29 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ModeloDto" nillable="true" type="tns:ModeloDto" />
+  <xs:complexType name="ArrayOfHallazgoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HallazgoDto" nillable="true" type="tns:HallazgoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHallazgoDto" nillable="true" type="tns:ArrayOfHallazgoDto" />
+  <xs:complexType name="HallazgoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Valor" type="xs:int" />
+      <xs:element minOccurs="0" name="defecto" nillable="true" type="tns:DefectoDto" />
+      <xs:element minOccurs="0" name="hora" type="xs:int" />
+      <xs:element minOccurs="0" name="pie" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HallazgoDto" nillable="true" type="tns:HallazgoDto" />
+  <xs:complexType name="DefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdDefecto" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DefectoDto" nillable="true" type="tns:DefectoDto" />
   <xs:complexType name="ArrayOfUsuarioDto">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioDto" nillable="true" type="tns:UsuarioDto" />
@@ -85,12 +109,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDefectoDto" nillable="true" type="tns:ArrayOfDefectoDto" />
-  <xs:complexType name="DefectoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IdDefecto" type="xs:int" />
-      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DefectoDto" nillable="true" type="tns:DefectoDto" />
 </xs:schema>
