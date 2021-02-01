@@ -168,6 +168,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
                 
             }catch(Exception e)
             {
+                
                 ok = false;
                 ErrorProvider ep = new ErrorProvider();
                 ep.SetError(txtNumero,"DEBE INGRESAR UN NUMERO ENTERO");

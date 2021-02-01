@@ -17,7 +17,8 @@ namespace ControlCalidad.Cliente.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autenticacion());
+            Application.Run( new Autenticacion());
+            
             //Application.Run(new VistaInspeccion());
         }
 

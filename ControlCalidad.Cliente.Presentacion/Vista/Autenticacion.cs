@@ -18,6 +18,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         public Autenticacion()
         {
             InitializeComponent();
+           
         }
 
         public string usuario
@@ -68,7 +69,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
         private void Autenticacion_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
     }
 }

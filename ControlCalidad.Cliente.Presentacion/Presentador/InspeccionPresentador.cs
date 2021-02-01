@@ -38,5 +38,15 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
         {
             return Adaptador.ContabilizarDefecto(pie,idDefecto,NumeroOP);
         }
+
+        public void RegistrarParPrimera(int Valor, int NumeroOP)
+        {
+            Adaptador.RegistrarParPrimera(Valor,NumeroOP);
+        }
+
+        public int ObtenerCantidadPrimera(int NumeroOP)
+        {
+            return Adaptador.ObtenerCantidadPrimera(NumeroOP);
+        }
     }
 }

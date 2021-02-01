@@ -81,6 +81,18 @@
   <wsdl:message name="IControlCalidadServicio_ContabilizarDefecto_OutputMessage">
     <wsdl:part name="parameters" element="tns:ContabilizarDefectoResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarParPrimera_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarParPrimera" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarParPrimera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarParPrimeraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerCantidadPrimera_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCantidadPrimera" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerCantidadPrimera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCantidadPrimeraResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="GetLineas">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineas" message="tns:IControlCalidadServicio_GetLineas_InputMessage" />
@@ -129,6 +141,14 @@
     <wsdl:operation name="ContabilizarDefecto">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ContabilizarDefecto" message="tns:IControlCalidadServicio_ContabilizarDefecto_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ContabilizarDefectoResponse" message="tns:IControlCalidadServicio_ContabilizarDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarParPrimera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera" message="tns:IControlCalidadServicio_RegistrarParPrimera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimeraResponse" message="tns:IControlCalidadServicio_RegistrarParPrimera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCantidadPrimera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera" message="tns:IControlCalidadServicio_ObtenerCantidadPrimera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse" message="tns:IControlCalidadServicio_ObtenerCantidadPrimera_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -234,6 +254,24 @@
     </wsdl:operation>
     <wsdl:operation name="ContabilizarDefecto">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ContabilizarDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarParPrimera">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCantidadPrimera">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

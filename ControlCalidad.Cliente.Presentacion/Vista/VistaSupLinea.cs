@@ -22,6 +22,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         public VistaSupLinea(UsuarioDto supervisorLineaActual)
         {
             this.supervisorLinea = supervisorLineaActual;
+            
             InitializeComponent();
 
         }
@@ -135,12 +136,34 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            OrdenDeProduccionPresentador opPresentador = new OrdenDeProduccionPresentador(this);
-            bool cambioDeEstado = opPresentador.CambiarEstadoOP(int.Parse(lbNOP.Text), "Finalizada");
-            if (cambioDeEstado) this.lbEstado.Text = "Finalizada";
-            btnReanudar.Enabled = false;
+
+
+            if (MessageBox.Show("¿Esta seguro de finalizar la Orden de produccion Actual ?", "FinalizarOP", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                OrdenDeProduccionPresentador opPresentador = new OrdenDeProduccionPresentador(this);
+                bool cambioDeEstado = opPresentador.CambiarEstadoOP(int.Parse(lbNOP.Text), "Finalizada");
+                if (cambioDeEstado)
+                {
+                    this.lbEstado.Text = "Finalizada";
+                    MessageBox.Show("Orden Finalizada");
+                }
+
+                this.OcultarPanelOP();
+                PanelNuevaOP.Visible = true;
+
+
+            }
+
 
             
+
+            
+        }
+
+        private void btnDatosEnLinea_Click(object sender, EventArgs e)
+        {
+            OrdenDeProduccionPresentador opPresentador = new OrdenDeProduccionPresentador(this);
+            opPresentador.MostrarDatosEnLinea(OpActual,supervisorLinea);
         }
     }
 }

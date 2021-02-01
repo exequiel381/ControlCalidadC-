@@ -161,6 +161,7 @@
             this.btnDatosEnLinea.TabIndex = 11;
             this.btnDatosEnLinea.Text = "Ver Datos en Linea";
             this.btnDatosEnLinea.UseVisualStyleBackColor = true;
+            this.btnDatosEnLinea.Click += new System.EventHandler(this.btnDatosEnLinea_Click);
             // 
             // lbEstado
             // 
@@ -246,6 +247,7 @@
             this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Visible = false;
             // 
             // label4
             // 

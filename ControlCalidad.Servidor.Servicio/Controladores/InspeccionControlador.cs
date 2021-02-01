@@ -31,6 +31,23 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             OrdenDeProduccion op = Repositorio.getRepositorio().ObtenerOrden(NumeroOP);
             return op.ContabilizarDefecto(pie, idDefecto);
         }
+
+        public void RegistrarParPrimera(int Valor, int NumeroOP)
+        {
+            OrdenDeProduccion op = Repositorio.getRepositorio().ObtenerOrden(NumeroOP);
+
+            op.RegistrarParPrimera(Valor);
+
+            Repositorio.getRepositorio().ActualizarOP(op);
+
+
+        }
+
+        public int ObtenerCantidadPrimera(int NumeroOP)
+        {
+            OrdenDeProduccion op = Repositorio.getRepositorio().ObtenerOrden(NumeroOP);
+            return op.ObtenerCantidadPrimera();
+        }
     }
 
     

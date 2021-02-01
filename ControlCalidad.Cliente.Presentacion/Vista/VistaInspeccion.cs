@@ -93,6 +93,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             DerReproceso.Columns[0].Width = 40;
             DerReproceso.Columns[1].Width = 100;
             DerReproceso.Columns[2].Width = 60;
+
+            lbParesDePrimera.Text = "" + inspeccionPresentador.ObtenerCantidadPrimera(op.Numero);
         }
 
        
@@ -163,7 +165,21 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             this.Close();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
+            if (lbParesDePrimera.Text.Equals("0")  && Valor < 0)
+            {
+                //mostraremos un mensaje en un label para no entorpecer
+            }
+            else
+            {
+                inspeccionPresentador.RegistrarParPrimera(Valor, op.Numero);
+                lbParesDePrimera.Text = "" + inspeccionPresentador.ObtenerCantidadPrimera(op.Numero);
+            }
+
+            
+        }
 
 
 
@@ -215,9 +231,46 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
         }
 
+       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //*
 
-       
+
     }
 }

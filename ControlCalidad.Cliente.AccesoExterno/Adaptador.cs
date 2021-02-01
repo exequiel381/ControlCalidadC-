@@ -109,6 +109,21 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.ContabilizarDefecto(pie, idDefecto, NumeroOP);
             }
         }
-        
+
+        public static void RegistrarParPrimera(int Valor,int NumeroOP)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                servicio.RegistrarParPrimera(Valor,NumeroOP);
+            }
+        }
+
+        public static int ObtenerCantidadPrimera(int NumeroOP)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ObtenerCantidadPrimera(NumeroOP);
+            }
+        }
     }
 }

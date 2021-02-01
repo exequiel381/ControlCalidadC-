@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,6 +73,7 @@
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lbParesDePrimera = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IzqObservado)).BeginInit();
@@ -204,15 +209,16 @@
             // 
             // cbxHoras
             // 
+            this.cbxHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxHoras.FormattingEnabled = true;
             this.cbxHoras.Location = new System.Drawing.Point(186, 70);
             this.cbxHoras.Name = "cbxHoras";
-            this.cbxHoras.Size = new System.Drawing.Size(121, 21);
+            this.cbxHoras.Size = new System.Drawing.Size(121, 28);
             this.cbxHoras.TabIndex = 12;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.IzqReproceso);
             this.panel1.Controls.Add(this.IzqObservado);
             this.panel1.Controls.Add(this.label10);
@@ -235,6 +241,8 @@
             this.IzqReproceso.MultiSelect = false;
             this.IzqReproceso.Name = "IzqReproceso";
             this.IzqReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IzqReproceso.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.IzqReproceso.RowTemplate.Height = 40;
             this.IzqReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.IzqReproceso.Size = new System.Drawing.Size(240, 412);
@@ -268,6 +276,8 @@
             this.IzqObservado.MultiSelect = false;
             this.IzqObservado.Name = "IzqObservado";
             this.IzqObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IzqObservado.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.IzqObservado.RowTemplate.Height = 40;
             this.IzqObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.IzqObservado.Size = new System.Drawing.Size(240, 412);
@@ -292,39 +302,45 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Orange;
+            this.label10.BackColor = System.Drawing.Color.Black;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(356, 29);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 20);
             this.label10.TabIndex = 2;
             this.label10.Text = "REPROCESO";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Orange;
+            this.label9.BackColor = System.Drawing.Color.Black;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(79, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 20);
             this.label9.TabIndex = 1;
             this.label9.Text = "OBSERVADO";
+            this.label9.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Orange;
+            this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(193, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "PIE IZQUIERDO";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.DerReproceso);
             this.panel2.Controls.Add(this.DerObservado);
             this.panel2.Controls.Add(this.label13);
@@ -348,6 +364,8 @@
             this.DerReproceso.MultiSelect = false;
             this.DerReproceso.Name = "DerReproceso";
             this.DerReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DerReproceso.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DerReproceso.RowTemplate.Height = 40;
             this.DerReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DerReproceso.Size = new System.Drawing.Size(240, 412);
@@ -381,6 +399,8 @@
             this.DerObservado.MultiSelect = false;
             this.DerObservado.Name = "DerObservado";
             this.DerObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DerObservado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DerObservado.RowTemplate.Height = 40;
             this.DerObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DerObservado.Size = new System.Drawing.Size(240, 412);
@@ -405,35 +425,41 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Orange;
+            this.label13.BackColor = System.Drawing.Color.Black;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(412, 29);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(120, 20);
             this.label13.TabIndex = 2;
             this.label13.Text = "REPROCESO";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Orange;
+            this.label12.BackColor = System.Drawing.Color.Black;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(70, 29);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(121, 20);
             this.label12.TabIndex = 1;
             this.label12.Text = "OBSERVADO";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Orange;
+            this.label11.BackColor = System.Drawing.Color.Black;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(219, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(131, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "PIE DERECHO";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnSumar
             // 
@@ -476,21 +502,42 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(892, 628);
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Beige;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(885, 637);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 36);
+            this.button1.Size = new System.Drawing.Size(150, 41);
             this.button1.TabIndex = 18;
             this.button1.Text = "Par de Primera";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(186, 635);
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(123, 635);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(138, 43);
             this.button2.TabIndex = 19;
             this.button2.Text = "Hermanado";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbParesDePrimera
+            // 
+            this.lbParesDePrimera.AutoSize = true;
+            this.lbParesDePrimera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbParesDePrimera.Location = new System.Drawing.Point(1073, 644);
+            this.lbParesDePrimera.Name = "lbParesDePrimera";
+            this.lbParesDePrimera.Size = new System.Drawing.Size(77, 24);
+            this.lbParesDePrimera.TabIndex = 20;
+            this.lbParesDePrimera.Text = "label14";
             // 
             // VistaInspeccion
             // 
@@ -498,6 +545,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ControlCalidad.Cliente.Presentacion.Properties.Resources.Freewallpaper99_com;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lbParesDePrimera);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFinalizar);
@@ -577,5 +625,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label lbParesDePrimera;
     }
 }

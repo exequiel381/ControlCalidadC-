@@ -21,6 +21,7 @@ namespace ControlCalidad.Servidor.Dominio
         public Modelo modelo { get; set; }
 
         public List<Hallazgo> hallazgos = new List<Hallazgo>();
+        public int ParesDePrimera = 0;
 
        public void RegistrarHallazgo(Hallazgo h)
         {
@@ -41,6 +42,15 @@ namespace ControlCalidad.Servidor.Dominio
             return cantidad;
         }
 
+        public void RegistrarParPrimera(int Valor)
+        {
+            ParesDePrimera = ParesDePrimera + Valor;
+        }
+
+        public int ObtenerCantidadPrimera()
+        {
+            return ParesDePrimera;
+        }
 
     }
 }

@@ -86,6 +86,18 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ContabilizarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/ContabilizarDefectoResponse")]
         System.Threading.Tasks.Task<int> ContabilizarDefectoAsync(string pie, int idDefecto, int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimeraResponse")]
+        void RegistrarParPrimera(int Valor, int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimeraResponse")]
+        System.Threading.Tasks.Task RegistrarParPrimeraAsync(int Valor, int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse")]
+        int ObtenerCantidadPrimera(int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse")]
+        System.Threading.Tasks.Task<int> ObtenerCantidadPrimeraAsync(int NumeroOP);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -209,6 +221,22 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<int> ContabilizarDefectoAsync(string pie, int idDefecto, int NumeroOP) {
             return base.Channel.ContabilizarDefectoAsync(pie, idDefecto, NumeroOP);
+        }
+        
+        public void RegistrarParPrimera(int Valor, int NumeroOP) {
+            base.Channel.RegistrarParPrimera(Valor, NumeroOP);
+        }
+        
+        public System.Threading.Tasks.Task RegistrarParPrimeraAsync(int Valor, int NumeroOP) {
+            return base.Channel.RegistrarParPrimeraAsync(Valor, NumeroOP);
+        }
+        
+        public int ObtenerCantidadPrimera(int NumeroOP) {
+            return base.Channel.ObtenerCantidadPrimera(NumeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<int> ObtenerCantidadPrimeraAsync(int NumeroOP) {
+            return base.Channel.ObtenerCantidadPrimeraAsync(NumeroOP);
         }
     }
 }

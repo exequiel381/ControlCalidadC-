@@ -237,5 +237,15 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorInspeccion.ContabilizarDefecto(pie, idDefecto, NumeroOP);
         }
+
+        public int ObtenerCantidadPrimera(int NumeroOP)
+        {
+            return _controladorInspeccion.ObtenerCantidadPrimera(NumeroOP);
+        }
+
+        public void RegistrarParPrimera(int Valor, int NumeroOP)
+        {
+            _controladorInspeccion.RegistrarParPrimera(Valor, NumeroOP);
+        }
     }
  }

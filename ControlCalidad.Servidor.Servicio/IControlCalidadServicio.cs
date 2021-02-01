@@ -44,5 +44,12 @@ namespace ControlCalidad.Servidor.Servicio
         [OperationContract]
 
         int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP);
+
+        [OperationContract]
+        void RegistrarParPrimera(int Valor, int NumeroOP);
+        [OperationContract]
+        int ObtenerCantidadPrimera(int NumeroOP);
+        
+
     }
 }

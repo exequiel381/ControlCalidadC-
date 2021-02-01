@@ -12,7 +12,7 @@ namespace ControlCalidad.Servidor.Servicio.Entidades
     public class OrdenDeProduccionDto
     {
         [DataMember]
-        public int Numero { get; set; }
+        public int Numero {  get; set; }
         [DataMember]
         public string Estado { get; set; }
         [DataMember]

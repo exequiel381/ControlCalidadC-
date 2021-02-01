@@ -117,5 +117,49 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
 
 
         }
+
+        public void MostrarDatosEnLinea(OrdenDeProduccionDto op , UsuarioDto supLinea)
+        {
+            TurnoDto t = this.ObtenerTurno();
+            if (t != null)
+            {
+                
+                //TRAEMOS UN ARRAY DE DEFECTOS DTO Y LO HACEMOS UNA LISTA
+                List<DefectoDto> ddto = new List<DefectoDto>();
+                foreach (DefectoDto d in Adaptador.GetDefectos())
+                {
+                    ddto.Add(new DefectoDto
+                    {
+
+                        IdDefecto = d.IdDefecto,
+                        Detalle = d.Detalle,
+                        TipoDefecto = d.TipoDefecto
+
+                    });
+                }
+
+                //OBTENEMOS DOS LISTAS, UNA DE DEFECTOS REPROCESO Y OTRA DE OBSERVADOS
+                List<DefectoDto> observados = ddto.FindAll(
+                    delegate (DefectoDto dO) {
+                        return dO.TipoDefecto == "Observado";
+                    });
+
+                List<DefectoDto> reproceso = ddto.FindAll(
+                    delegate (DefectoDto dr) {
+                        return dr.TipoDefecto == "Reproceso";
+                    });
+
+                DatosEnLinea vistaDatosEnLinea = new DatosEnLinea(op, supLinea,observados,reproceso,t);
+                vistaDatosEnLinea.RellenarCamposyTablas();
+                vistaDatosEnLinea.Show();
+
+
+            }
+            else
+            {
+                MessageBox.Show("No se puedo ver datos en linea, Esta fuera del turno de Trabajo");
+               
+            }
+        }
     }
 }

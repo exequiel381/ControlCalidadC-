@@ -65,6 +65,12 @@
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAutenticacion.cs" />
+    <Compile Include="Vista\DatosEnLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DatosEnLinea.Designer.cs">
+      <DependentUpon>DatosEnLinea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\nuevaOP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DatosEnLinea.resx">
+      <DependentUpon>DatosEnLinea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\nuevaOP.resx">
       <DependentUpon>nuevaOP.cs</DependentUpon>
