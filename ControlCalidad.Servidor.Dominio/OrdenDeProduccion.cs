@@ -21,7 +21,9 @@ namespace ControlCalidad.Servidor.Dominio
         public Modelo modelo { get; set; }
 
         public List<Hallazgo> hallazgos = new List<Hallazgo>();
-        public int ParesDePrimera = 0;
+        
+        public List<Hallazgo> ParesDePrimera = new List<Hallazgo>();
+        
 
        public void RegistrarHallazgo(Hallazgo h)
         {
@@ -42,14 +44,30 @@ namespace ControlCalidad.Servidor.Dominio
             return cantidad;
         }
 
-        public void RegistrarParPrimera(int Valor)
+        public void RegistrarParPrimera(string primera, int hora, int Valor)
         {
-            ParesDePrimera = ParesDePrimera + Valor;
+
+            Hallazgo h = new Hallazgo
+            {
+                ParDePrimera = primera,
+                hora = hora,
+                Valor = Valor
+            };
+            ParesDePrimera.Add(h);
         }
 
         public int ObtenerCantidadPrimera()
         {
-            return ParesDePrimera;
+            int cantidad = 0;
+
+            //cantidad = hallazgos.FindAll(h => h.pie==pie && h.defecto.idDefecto==idDefecto).Count;
+
+            foreach (Hallazgo h in ParesDePrimera)
+            {
+                cantidad = cantidad + h.Valor;
+            }
+
+            return cantidad;
         }
 
     }

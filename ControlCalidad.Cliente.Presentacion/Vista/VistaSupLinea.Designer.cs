@@ -50,6 +50,7 @@
             this.PanelNuevaOP = new System.Windows.Forms.Panel();
             this.btnCrearOP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.PanelOP.SuspendLayout();
             this.PanelNuevaOP.SuspendLayout();
             this.SuspendLayout();
@@ -314,12 +315,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "No posse ninguna orden de produccion asignada . ¿Desea crear una ?";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(40, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cambiar Usuario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VistaSupLinea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ControlCalidad.Cliente.Presentacion.Properties.Resources.Freewallpaper99_com;
             this.ClientSize = new System.Drawing.Size(962, 522);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.PanelNuevaOP);
             this.Controls.Add(this.PanelOP);
             this.Name = "VistaSupLinea";
@@ -358,5 +370,6 @@
         private System.Windows.Forms.Label lbModelo;
         private System.Windows.Forms.Label lbObjetivo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Cliente.Presentacion.Presentador;
+﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
+using ControlCalidad.Cliente.Presentacion.Presentador;
 using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         List<DefectoDto> Reproceso;
         TurnoDto t;
         InspeccionPresentador inspeccionPresentador;
+        List<IObservador> observadores = new List<IObservador>();
         
 
         public VistaInspeccion(OrdenDeProduccionDto op, UsuarioDto supervisorCalidad, List<DefectoDto> observados, List<DefectoDto> Reproceso, TurnoDto t)//List<int> horasTurno)
@@ -34,7 +36,26 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             InitializeComponent();
         }
 
-        
+        public void agregarObservador(IObservador o)
+        {
+            observadores.Add(o);
+          
+        }
+
+        public void eliminarObservador(IObservador o)
+        {
+            observadores.Remove(o);
+        }
+        // ---------------------------------
+        public void notificarObservadores()
+        {
+            // Enviar la notificación a cada observador a través de su propio método
+            foreach (IObservador obj in observadores)
+            {
+                obj.observadoActualizado();
+            }
+        }
+
 
         private void VistaInspeccion_Load(object sender, EventArgs e)
         {
@@ -132,6 +153,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
                 //tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = cantidadActual + Valor;
                 tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = inspeccionPresentador.ContabilizarDefecto(pie, idDefecto, op.Numero);
+                this.notificarObservadores();           
             }
 
         }
@@ -174,7 +196,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             }
             else
             {
-                inspeccionPresentador.RegistrarParPrimera(Valor, op.Numero);
+                inspeccionPresentador.RegistrarParPrimera("ParDePrimera", int.Parse(cbxHoras.SelectedItem.ToString()), Valor, op.Numero);
                 lbParesDePrimera.Text = "" + inspeccionPresentador.ObtenerCantidadPrimera(op.Numero);
             }
 

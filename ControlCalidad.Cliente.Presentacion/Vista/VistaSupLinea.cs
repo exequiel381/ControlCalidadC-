@@ -165,5 +165,12 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             OrdenDeProduccionPresentador opPresentador = new OrdenDeProduccionPresentador(this);
             opPresentador.MostrarDatosEnLinea(OpActual,supervisorLinea);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Autenticacion().ShowDialog();
+            this.Close();
+            
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Cliente.Presentacion.Presentador;
+﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
+using ControlCalidad.Cliente.Presentacion.Presentador;
 using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ControlCalidad.Cliente.Presentacion.Vista
+namespace ControlCalidad.Cliente.Presentacion.Vista  
 {
-    public partial class DatosEnLinea : Form
+    public partial class DatosEnLinea : Form, IObservador
     {
         OrdenDeProduccionDto op;
         UsuarioDto supervisorLinea;
@@ -36,6 +37,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         private void DatosEnLinea_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void observadoActualizado()
+        {
+            this.ActualizarDatos();
         }
 
         public void RellenarCamposyTablas()
@@ -93,6 +99,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            this.ActualizarDatos();
+        }
+
+        public void ActualizarDatos()
         {
             IzqObservado.Rows.Clear();
             IzqReproceso.Rows.Clear();

@@ -39,8 +39,8 @@ namespace ControlCalidad.Cliente.Presentador
                             SL.Show();
                             break;
                         case "SupervisorDeCalidad":
-                            VistaSupCalidad SC = new VistaSupCalidad(u);
-                            SC.rellenarCampos(u.opActual);
+                            VistaSupCalidad SC = new VistaSupCalidad(u,u.opActual);
+                            SC.rellenarCampos();
                             SC.Show();//Mostramos la OP.
                             break;
                     }
@@ -62,10 +62,11 @@ namespace ControlCalidad.Cliente.Presentador
                             SL.Show();//Mostramos el `panel para crear una OP.
                             break;
                         case "SupervisorDeCalidad":
-                            VistaSupCalidad SC = new VistaSupCalidad(u);
+                            VistaSupCalidad SC = new VistaSupCalidad(u,null);
                             MessageBox.Show("Usted No tiene ninguna orden de produccion asignada para trabajar");
+                            return false;
                             //SC.Show();//Mostramos aviso que no tiene orden asignada
-                            break;
+                            
                     }
                    
                 }

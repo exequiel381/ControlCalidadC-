@@ -33,7 +33,7 @@ namespace ControlCalidad.Servidor.Servicio
             
             OrdenDeProduccionDto OPActual = null;
             var user = Repositorio.getRepositorio().AutenticarUsuario(usuario, contrasenia);
-
+            var op = user.verificarDisponibilidadUsuario();
 
             if (user != null)
 
@@ -44,12 +44,13 @@ namespace ControlCalidad.Servidor.Servicio
                 
 
                 OPActual = new OrdenDeProduccionDto {
-                    Numero = user.verificarDisponibilidadUsuario().Numero,
-                    Estado = user.verificarDisponibilidadUsuario().Estado,
-                    lineaAsignada = new LineaDto { Numero = user.verificarDisponibilidadUsuario().lineaAsignada.Numero },
-                    Color = new ColorDto { Codigo = user.verificarDisponibilidadUsuario().Color.Codigo , Descripcion = user.verificarDisponibilidadUsuario().modelo.Denominacion },
-                    Modelo = new ModeloDto { Sku = user.verificarDisponibilidadUsuario().modelo.Sku, Denominacion = user.verificarDisponibilidadUsuario().modelo.Denominacion, Objetivo = user.verificarDisponibilidadUsuario().modelo.Objetivo }
-
+                    Numero = op.Numero,
+                    Estado = op.Estado,
+                    lineaAsignada = new LineaDto { Numero = op.lineaAsignada.Numero },
+                    Color = new ColorDto { Codigo = op.Color.Codigo , Descripcion = op.modelo.Denominacion },
+                    Modelo = new ModeloDto { Sku = op.modelo.Sku, Denominacion = op.modelo.Denominacion, Objetivo = op.modelo.Objetivo },
+                    SupLineaAsignado = new UsuarioDto {usuario = op.SupLineaAsignado.usuario }
+                    
                 };
 
                 }
@@ -243,9 +244,9 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorInspeccion.ObtenerCantidadPrimera(NumeroOP);
         }
 
-        public void RegistrarParPrimera(int Valor, int NumeroOP)
+        public void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP)
         {
-            _controladorInspeccion.RegistrarParPrimera(Valor, NumeroOP);
+            _controladorInspeccion.RegistrarParPrimera(primera, hora, Valor, NumeroOP);
         }
     }
  }

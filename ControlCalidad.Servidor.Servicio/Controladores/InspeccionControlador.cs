@@ -32,11 +32,11 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return op.ContabilizarDefecto(pie, idDefecto);
         }
 
-        public void RegistrarParPrimera(int Valor, int NumeroOP)
+        public void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP)
         {
             OrdenDeProduccion op = Repositorio.getRepositorio().ObtenerOrden(NumeroOP);
 
-            op.RegistrarParPrimera(Valor);
+            op.RegistrarParPrimera(primera,hora,Valor);
 
             Repositorio.getRepositorio().ActualizarOP(op);
 

@@ -12,5 +12,7 @@ namespace ControlCalidad.Servidor.Dominio
         public string pie { get; set; }
         public Defecto defecto { get; set; }
         public int Valor { get; set; }
+
+        public string ParDePrimera { get; set; }
     }
 }

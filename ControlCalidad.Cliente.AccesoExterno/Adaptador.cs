@@ -110,11 +110,11 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-        public static void RegistrarParPrimera(int Valor,int NumeroOP)
+        public static void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                servicio.RegistrarParPrimera(Valor,NumeroOP);
+                servicio.RegistrarParPrimera(primera, hora, Valor, NumeroOP);
             }
         }
 

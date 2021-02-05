@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IObservador.cs" />
     <Compile Include="Interfaces\IOrdenDeProduccion.cs" />
     <Compile Include="Presentador\AutenticacionPresentador.cs" />
     <Compile Include="Presentador\InspeccionPresentador.cs" />

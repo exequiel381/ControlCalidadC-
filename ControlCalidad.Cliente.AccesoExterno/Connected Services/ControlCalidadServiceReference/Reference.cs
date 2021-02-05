@@ -88,10 +88,10 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         System.Threading.Tasks.Task<int> ContabilizarDefectoAsync(string pie, int idDefecto, int NumeroOP);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimeraResponse")]
-        void RegistrarParPrimera(int Valor, int NumeroOP);
+        void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParPrimeraResponse")]
-        System.Threading.Tasks.Task RegistrarParPrimeraAsync(int Valor, int NumeroOP);
+        System.Threading.Tasks.Task RegistrarParPrimeraAsync(string primera, int hora, int Valor, int NumeroOP);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse")]
         int ObtenerCantidadPrimera(int NumeroOP);
@@ -223,12 +223,12 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
             return base.Channel.ContabilizarDefectoAsync(pie, idDefecto, NumeroOP);
         }
         
-        public void RegistrarParPrimera(int Valor, int NumeroOP) {
-            base.Channel.RegistrarParPrimera(Valor, NumeroOP);
+        public void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP) {
+            base.Channel.RegistrarParPrimera(primera, hora, Valor, NumeroOP);
         }
         
-        public System.Threading.Tasks.Task RegistrarParPrimeraAsync(int Valor, int NumeroOP) {
-            return base.Channel.RegistrarParPrimeraAsync(Valor, NumeroOP);
+        public System.Threading.Tasks.Task RegistrarParPrimeraAsync(string primera, int hora, int Valor, int NumeroOP) {
+            return base.Channel.RegistrarParPrimeraAsync(primera, hora, Valor, NumeroOP);
         }
         
         public int ObtenerCantidadPrimera(int NumeroOP) {

@@ -109,9 +109,13 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
                     });
 
 
-                VistaInspeccion vi = new VistaInspeccion(op,supervisorCalidadActual,observados,reproceso,t);
-                vi.RellenarCamposyTablas();
-                vi.Show();
+                VistaInspeccion vistaIspeccion = new VistaInspeccion(op,supervisorCalidadActual,observados,reproceso,t);
+                DatosEnLinea datosEnLinea = new DatosEnLinea(op,op.SupLineaAsignado,observados,reproceso,t);
+                vistaIspeccion.agregarObservador(datosEnLinea);
+                datosEnLinea.RellenarCamposyTablas();
+                vistaIspeccion.RellenarCamposyTablas();
+                vistaIspeccion.Show();
+                datosEnLinea.Show();
             }
             else MessageBox.Show("No se puede Comenzar una INSPECCION. Esta fuera del turno de Trabajo");
 

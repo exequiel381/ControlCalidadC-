@@ -17,9 +17,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         OrdenDeProduccionDto op;
         UsuarioDto supervisorCalidadActual;
 
-        public VistaSupCalidad(UsuarioDto supervisorCalidadActual)
+        public VistaSupCalidad(UsuarioDto supervisorCalidadActual, OrdenDeProduccionDto op)
         {
             this.supervisorCalidadActual = supervisorCalidadActual;
+            this.op = op;
             InitializeComponent();
         }
 
@@ -33,9 +34,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
         }
 
-        public void rellenarCampos(OrdenDeProduccionDto op)//int nOP, string estado, int linea)
+        public void rellenarCampos()//int nOP, string estado, int linea)
         {
-            this.op = op;
+            
             lbNOP.Text = "" + op.Numero;
             lbEstado.Text = op.Estado;
             lbLineaOP.Text = "" + op.lineaAsignada.Numero;
@@ -46,6 +47,12 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             OrdenDeProduccionPresentador opp = new OrdenDeProduccionPresentador(null);
             opp.ComenzarInspeccion(op,supervisorCalidadActual);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Autenticacion().ShowDialog();
+            this.Close();
         }
     }
 }
