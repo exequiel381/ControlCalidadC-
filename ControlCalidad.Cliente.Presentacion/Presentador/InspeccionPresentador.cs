@@ -11,7 +11,7 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
     public class InspeccionPresentador
     {
         OrdenDeProduccionDto op;
-
+        
         public InspeccionPresentador(OrdenDeProduccionDto op)
         {
             this.op = op;
@@ -34,6 +34,11 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
 
         }
 
+        public void GuardarDatosHermanado(int numeroOP, int primera, int segunda)
+        {
+            Adaptador.GuardarDatosHermanado(numeroOP,primera,segunda);
+        }
+
         public int ContabilizarDefecto(string pie, int idDefecto, int NumeroOP)
         {
             return Adaptador.ContabilizarDefecto(pie,idDefecto,NumeroOP);
@@ -47,6 +52,11 @@ namespace ControlCalidad.Cliente.Presentacion.Presentador
         public int ObtenerCantidadPrimera(int NumeroOP)
         {
             return Adaptador.ObtenerCantidadPrimera(NumeroOP);
+        }
+
+        public string ObtenerPromerdioParesPorHora()
+        {
+            return Adaptador.ObtenerPromerdioParesPorHora(op.Numero);
         }
     }
 }

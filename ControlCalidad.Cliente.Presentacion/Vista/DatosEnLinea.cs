@@ -50,7 +50,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             lbTurno.Text = t.Descripcion;
             lbNOP.Text = "" + op.Numero;
             lbLinea.Text = "" + op.lineaAsignada.Numero;
-         
+            lbObj.Text = "" + op.Modelo.Objetivo;
+            lbPromedio.Text = inspeccionPresentador.ObtenerPromerdioParesPorHora();
+
             //Damos el ancho de las columnas y le cargamos los defectos
 
             IzqObservado.Columns[0].Width = 40;

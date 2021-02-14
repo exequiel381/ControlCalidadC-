@@ -25,3 +25,4 @@ D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\Contr
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vista.nuevaOP.resources
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vista.VistaInspeccion.resources
 D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vista.DatosEnLinea.resources
+D:\Unidad Exe\FAC(cuarto Año)\Ing del software\IS_TP1_cliente_servidor_C#\ControlCalidad\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.ControlDeUsuario.Hermanado.resources

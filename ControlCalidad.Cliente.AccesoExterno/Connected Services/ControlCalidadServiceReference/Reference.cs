@@ -98,6 +98,18 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse")]
         System.Threading.Tasks.Task<int> ObtenerCantidadPrimeraAsync(int NumeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHora", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHoraResponse")]
+        string ObtenerPromerdioParesPorHora(int nop);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHora", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHoraResponse")]
+        System.Threading.Tasks.Task<string> ObtenerPromerdioParesPorHoraAsync(int nop);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanado", ReplyAction="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanadoResponse")]
+        void GuardarDatosHermanado(int numeroOP, int primera, int segunda);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanado", ReplyAction="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanadoResponse")]
+        System.Threading.Tasks.Task GuardarDatosHermanadoAsync(int numeroOP, int primera, int segunda);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -237,6 +249,22 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<int> ObtenerCantidadPrimeraAsync(int NumeroOP) {
             return base.Channel.ObtenerCantidadPrimeraAsync(NumeroOP);
+        }
+        
+        public string ObtenerPromerdioParesPorHora(int nop) {
+            return base.Channel.ObtenerPromerdioParesPorHora(nop);
+        }
+        
+        public System.Threading.Tasks.Task<string> ObtenerPromerdioParesPorHoraAsync(int nop) {
+            return base.Channel.ObtenerPromerdioParesPorHoraAsync(nop);
+        }
+        
+        public void GuardarDatosHermanado(int numeroOP, int primera, int segunda) {
+            base.Channel.GuardarDatosHermanado(numeroOP, primera, segunda);
+        }
+        
+        public System.Threading.Tasks.Task GuardarDatosHermanadoAsync(int numeroOP, int primera, int segunda) {
+            return base.Channel.GuardarDatosHermanadoAsync(numeroOP, primera, segunda);
         }
     }
 }

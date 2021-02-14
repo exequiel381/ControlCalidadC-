@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaInspeccion));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,8 +73,9 @@
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHermanado = new System.Windows.Forms.Button();
             this.lbParesDePrimera = new System.Windows.Forms.Label();
+            this.hermanado1 = new ControlCalidad.Cliente.Presentacion.ControlDeUsuario.Hermanado();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IzqReproceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IzqObservado)).BeginInit();
@@ -241,8 +243,8 @@
             this.IzqReproceso.MultiSelect = false;
             this.IzqReproceso.Name = "IzqReproceso";
             this.IzqReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IzqReproceso.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IzqReproceso.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.IzqReproceso.RowTemplate.Height = 40;
             this.IzqReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.IzqReproceso.Size = new System.Drawing.Size(240, 412);
@@ -276,8 +278,8 @@
             this.IzqObservado.MultiSelect = false;
             this.IzqObservado.Name = "IzqObservado";
             this.IzqObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IzqObservado.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IzqObservado.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.IzqObservado.RowTemplate.Height = 40;
             this.IzqObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.IzqObservado.Size = new System.Drawing.Size(240, 412);
@@ -364,8 +366,8 @@
             this.DerReproceso.MultiSelect = false;
             this.DerReproceso.Name = "DerReproceso";
             this.DerReproceso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DerReproceso.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DerReproceso.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DerReproceso.RowTemplate.Height = 40;
             this.DerReproceso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DerReproceso.Size = new System.Drawing.Size(240, 412);
@@ -399,8 +401,8 @@
             this.DerObservado.MultiSelect = false;
             this.DerObservado.Name = "DerObservado";
             this.DerObservado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DerObservado.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DerObservado.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DerObservado.RowTemplate.Height = 40;
             this.DerObservado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DerObservado.Size = new System.Drawing.Size(240, 412);
@@ -516,18 +518,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
+            // btnHermanado
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(123, 635);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 43);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Hermanado";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnHermanado.BackColor = System.Drawing.Color.Black;
+            this.btnHermanado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHermanado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHermanado.Location = new System.Drawing.Point(123, 635);
+            this.btnHermanado.Name = "btnHermanado";
+            this.btnHermanado.Size = new System.Drawing.Size(138, 43);
+            this.btnHermanado.TabIndex = 19;
+            this.btnHermanado.Text = "Hermanado";
+            this.btnHermanado.UseVisualStyleBackColor = false;
+            this.btnHermanado.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbParesDePrimera
             // 
@@ -539,14 +541,24 @@
             this.lbParesDePrimera.TabIndex = 20;
             this.lbParesDePrimera.Text = "label14";
             // 
+            // hermanado1
+            // 
+            this.hermanado1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.hermanado1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hermanado1.BackgroundImage")));
+            this.hermanado1.Location = new System.Drawing.Point(16, 684);
+            this.hermanado1.Name = "hermanado1";
+            this.hermanado1.Size = new System.Drawing.Size(520, 177);
+            this.hermanado1.TabIndex = 21;
+            // 
             // VistaInspeccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ControlCalidad.Cliente.Presentacion.Properties.Resources.Freewallpaper99_com;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 691);
+            this.Controls.Add(this.hermanado1);
             this.Controls.Add(this.lbParesDePrimera);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnHermanado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnRestar);
@@ -609,7 +621,7 @@
         private System.Windows.Forms.Button btnRestar;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHermanado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Detalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -626,5 +638,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label lbParesDePrimera;
+        private ControlDeUsuario.Hermanado hermanado1;
     }
 }

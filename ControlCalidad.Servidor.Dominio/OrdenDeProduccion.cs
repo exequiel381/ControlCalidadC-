@@ -11,6 +11,9 @@ namespace ControlCalidad.Servidor.Dominio
         public int Numero { get; set; }
         public string Estado { get; set;}
 
+        public int ParesPrimera { get; set; }
+        public int ParesSegunda { get; set; }
+
         public Linea lineaAsignada { get; set;}
     
         public Usuario SupLineaAsignado { get; set;}
@@ -70,5 +73,38 @@ namespace ControlCalidad.Servidor.Dominio
             return cantidad;
         }
 
+        public int ObtenerPromerdioParesPorHora()
+        {
+            List<int> Horas = new List<int>();
+
+            foreach (Hallazgo h in ParesDePrimera)
+            {
+                if(!Horas.Exists(x=> x==h.hora))
+                {
+                    Horas.Add(h.hora);
+                }
+            }
+            foreach (Hallazgo h in hallazgos)
+            {
+                if (!Horas.Exists(x => x == h.hora))
+                {
+                    Horas.Add(h.hora);
+                }
+            }
+
+            try
+            {
+                return ParesDePrimera.Count() / Horas.Count();
+
+            } catch(Exception e)
+            {
+                return ParesDePrimera.Count();
+            }
+
+
+
+
+
+        }
     }
 }

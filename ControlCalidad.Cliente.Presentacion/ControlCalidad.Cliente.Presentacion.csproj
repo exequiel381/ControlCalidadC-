@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlDeUsuario\Hermanado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlDeUsuario\Hermanado.Designer.cs">
+      <DependentUpon>Hermanado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Vista\VistaSupLinea.Designer.cs">
       <DependentUpon>VistaSupLinea.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ControlDeUsuario\Hermanado.resx">
+      <DependentUpon>Hermanado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\horizontal_line_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

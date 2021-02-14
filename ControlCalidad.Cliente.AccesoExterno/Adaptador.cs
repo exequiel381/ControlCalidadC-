@@ -44,7 +44,16 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.GetLineasDisponibles();
             }
                 
-        } 
+        }
+
+        public static void GuardarDatosHermanado(int numeroOP, int primera, int segunda)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                servicio.GuardarDatosHermanado(numeroOP,primera,segunda);
+            }
+        }
+
         public static ModeloDto[] GetModelos()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
@@ -60,8 +69,16 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.GetColores();
             }
                 
-        } 
-        
+        }
+
+        public static string ObtenerPromerdioParesPorHora(int nop)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ObtenerPromerdioParesPorHora(nop);
+            }
+        }
+
         public static DefectoDto[] GetDefectos()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())

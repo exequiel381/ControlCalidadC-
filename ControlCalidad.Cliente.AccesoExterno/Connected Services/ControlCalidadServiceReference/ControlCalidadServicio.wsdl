@@ -93,6 +93,18 @@
   <wsdl:message name="IControlCalidadServicio_ObtenerCantidadPrimera_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerCantidadPrimeraResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerPromerdioParesPorHora_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPromerdioParesPorHora" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerPromerdioParesPorHora_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPromerdioParesPorHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GuardarDatosHermanado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDatosHermanado" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GuardarDatosHermanado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDatosHermanadoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="GetLineas">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineas" message="tns:IControlCalidadServicio_GetLineas_InputMessage" />
@@ -149,6 +161,14 @@
     <wsdl:operation name="ObtenerCantidadPrimera">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera" message="tns:IControlCalidadServicio_ObtenerCantidadPrimera_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimeraResponse" message="tns:IControlCalidadServicio_ObtenerCantidadPrimera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromerdioParesPorHora">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHora" message="tns:IControlCalidadServicio_ObtenerPromerdioParesPorHora_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHoraResponse" message="tns:IControlCalidadServicio_ObtenerPromerdioParesPorHora_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDatosHermanado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanado" message="tns:IControlCalidadServicio_GuardarDatosHermanado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanadoResponse" message="tns:IControlCalidadServicio_GuardarDatosHermanado_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -272,6 +292,24 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerCantidadPrimera">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerCantidadPrimera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromerdioParesPorHora">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerPromerdioParesPorHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDatosHermanado">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GuardarDatosHermanado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

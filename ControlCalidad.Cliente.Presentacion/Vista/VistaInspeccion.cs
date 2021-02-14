@@ -77,6 +77,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             lbNOP.Text =""+ op.Numero;
             lbLinea.Text = ""+op.lineaAsignada.Numero;
             cbxHoras.DataSource = t.horasDelTurno;
+            
            
             
             //Damos el ancho de las columnas y le cargamos los defectos
@@ -153,6 +154,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
                 //tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = cantidadActual + Valor;
                 tabla.Rows[tabla.CurrentRow.Index].Cells[2].Value = inspeccionPresentador.ContabilizarDefecto(pie, idDefecto, op.Numero);
+                lbParesDePrimera.Text = "" + inspeccionPresentador.ObtenerCantidadPrimera(op.Numero);
                 this.notificarObservadores();           
             }
 
@@ -198,6 +200,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
             {
                 inspeccionPresentador.RegistrarParPrimera("ParDePrimera", int.Parse(cbxHoras.SelectedItem.ToString()), Valor, op.Numero);
                 lbParesDePrimera.Text = "" + inspeccionPresentador.ObtenerCantidadPrimera(op.Numero);
+                this.notificarObservadores();
             }
 
             
@@ -257,7 +260,18 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if(hermanado1.Visible == true)
+            {
+                this.Size = new Size(1280, 721);
+                hermanado1.Visible = false;
+            }
+            else
+            {
+                hermanado1.Visible = true;
+                hermanado1.indicarNumeroOP(op.Numero);
+                this.Size = new Size(1280, 900);
+            }
+            
         }
 
         private void label9_Click_1(object sender, EventArgs e)
@@ -286,6 +300,31 @@ namespace ControlCalidad.Cliente.Presentacion.Vista
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbObj_Click(object sender, EventArgs e)
         {
 
         }

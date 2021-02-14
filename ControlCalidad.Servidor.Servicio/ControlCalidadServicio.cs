@@ -248,5 +248,15 @@ namespace ControlCalidad.Servidor.Servicio
         {
             _controladorInspeccion.RegistrarParPrimera(primera, hora, Valor, NumeroOP);
         }
+
+        public string ObtenerPromerdioParesPorHora(int nop)
+        {
+            return ""+Repositorio.getRepositorio().ordenes.Find(x => x.Numero == nop).ObtenerPromerdioParesPorHora();
+        }
+
+        public void GuardarDatosHermanado(int numeroOP, int primera, int segunda)
+        {
+            _controladorInspeccion.GuardarDatosHermanado(numeroOP,primera,segunda);
+        }
     }
  }

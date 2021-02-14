@@ -48,6 +48,11 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             OrdenDeProduccion op = Repositorio.getRepositorio().ObtenerOrden(NumeroOP);
             return op.ObtenerCantidadPrimera();
         }
+
+        public void GuardarDatosHermanado(int numeroOP, int primera, int segunda)
+        {
+            //Buscamos la op seteamos las cantidades y guardamos los cambios
+        }
     }
 
     

@@ -186,4 +186,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ObtenerPromerdioParesPorHora">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nop" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPromerdioParesPorHoraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPromerdioParesPorHoraResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDatosHermanado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
+        <xs:element minOccurs="0" name="primera" type="xs:int" />
+        <xs:element minOccurs="0" name="segunda" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDatosHermanadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

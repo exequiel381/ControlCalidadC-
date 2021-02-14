@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosEnLinea));
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DerReproceso = new System.Windows.Forms.DataGridView();
@@ -70,6 +71,10 @@
             this.lbParesDePrimera = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbPromedio = new System.Windows.Forms.Label();
+            this.lbObj = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DerReproceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DerObservado)).BeginInit();
@@ -477,12 +482,60 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbPromedio
+            // 
+            this.lbPromedio.AutoSize = true;
+            this.lbPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPromedio.Location = new System.Drawing.Point(1118, 697);
+            this.lbPromedio.Name = "lbPromedio";
+            this.lbPromedio.Size = new System.Drawing.Size(57, 20);
+            this.lbPromedio.TabIndex = 39;
+            this.lbPromedio.Text = "label7";
+            // 
+            // lbObj
+            // 
+            this.lbObj.AutoSize = true;
+            this.lbObj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbObj.Location = new System.Drawing.Point(1118, 675);
+            this.lbObj.Name = "lbObj";
+            this.lbObj.Size = new System.Drawing.Size(57, 20);
+            this.lbObj.TabIndex = 38;
+            this.lbObj.Text = "label7";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(911, 697);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(201, 20);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Promedio real por hora :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(911, 675);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(156, 20);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Objetivo por hora :";
+            // 
             // DatosEnLinea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ControlCalidad.Cliente.Presentacion.Properties.Resources.Freewallpaper99_com;
-            this.ClientSize = new System.Drawing.Size(1264, 705);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1264, 744);
+            this.Controls.Add(this.lbPromedio);
+            this.Controls.Add(this.lbObj);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbParesDePrimera);
@@ -555,5 +608,9 @@
         private System.Windows.Forms.Label lbParesDePrimera;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbPromedio;
+        private System.Windows.Forms.Label lbObj;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

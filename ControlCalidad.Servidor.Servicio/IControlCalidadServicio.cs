@@ -49,7 +49,10 @@ namespace ControlCalidad.Servidor.Servicio
         void RegistrarParPrimera(string primera, int hora, int Valor, int NumeroOP);
         [OperationContract]
         int ObtenerCantidadPrimera(int NumeroOP);
-        
+        [OperationContract]
+        string ObtenerPromerdioParesPorHora(int nop);
+        [OperationContract]
+        void GuardarDatosHermanado(int numeroOP, int primera, int segunda);
 
     }
 }

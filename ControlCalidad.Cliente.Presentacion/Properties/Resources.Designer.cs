@@ -73,6 +73,16 @@ namespace ControlCalidad.Cliente.Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark_64px {
+            get {
+                object obj = ResourceManager.GetObject("checkmark_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Freewallpaper99_com {
             get {
                 object obj = ResourceManager.GetObject("Freewallpaper99_com", resourceCulture);
